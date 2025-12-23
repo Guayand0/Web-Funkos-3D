@@ -15,6 +15,7 @@ h1 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 35px; /* espacio entre cards */
     padding: 0 15px; /* espacio a izquierda y derecha de la galería */
+    justify-content: center;
     justify-items: stretch; /* tarjetas ocupan ancho disponible */
     max-width: 1200px;
     margin: auto;
@@ -126,7 +127,7 @@ h1 {
 }
 
 body {
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 /* BOTÓN VOLVER */
