@@ -1,0 +1,4 @@
+[
+    { "carpeta": "1", "imagen": "imagen.png", "nombre": "Funko 1", "descripcion": "Descripción del Funko 1" },
+    { "carpeta": "2", "imagen": "imagen.jpg", "nombre": "Funko 2", "descripcion": "Descripción del Funko 2" }
+]
