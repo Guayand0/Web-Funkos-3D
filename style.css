@@ -43,6 +43,14 @@ h1 {
     color: #555;
 }
 
+.funko-info {
+    cursor: pointer;
+}
+
+.funko-info:hover h2 {
+    text-decoration: underline;
+}
+
 .funko-card {
     position: relative;
     background-color: white;
@@ -75,3 +83,69 @@ h1 {
 
 .arrow-left { left: 5px; }
 .arrow-right { right: 5px; }
+
+#funko-detalle {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+#funko-detalle img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#funko-detalle p {
+    font-size: 1.1em;
+}
+
+/* HEADER */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 80px;
+}
+
+/* BOTÓN VOLVER */
+.volver-btn {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    background: #333;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.volver-btn:hover {
+    background: #555;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+footer .redes a {
+    color: #ccc;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .redes a:hover {
+    color: white;
+}
