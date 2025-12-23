@@ -11,20 +11,30 @@ h1 {
 }
 
 #galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px; /* espacio entre cards */
+    padding: 0 15px; /* espacio a izquierda y derecha de la galería */
+    justify-items: stretch; /* tarjetas ocupan ancho disponible */
+    max-width: 1200px;
+    margin: auto;
 }
 
+/* TARJETA */
 .funko-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* ocupa todo el ancho disponible de la celda del grid */
     background-color: white;
-    width: 200px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     overflow: hidden;
     text-align: center;
     padding: 10px;
+    margin-bottom: 0px; /* vertical spacing entre filas */
+    height: 100%; /* iguala altura de todas las cards en la fila */
+    box-sizing: border-box;
 }
 
 .funko-card img {
@@ -44,6 +54,7 @@ h1 {
 }
 
 .funko-info {
+    margin-top: auto; /* fuerza que se quede abajo */
     cursor: pointer;
 }
 
@@ -52,9 +63,8 @@ h1 {
 }
 
 .funko-card {
-    position: relative;
+    width: 100%;
     background-color: white;
-    width: 200px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     overflow: hidden;
@@ -79,6 +89,7 @@ h1 {
     padding: 2px 8px;
     cursor: pointer;
     user-select: none;
+    z-index: 10;
 }
 
 .arrow-left { left: 5px; }
@@ -150,4 +161,18 @@ footer .redes a {
 
 footer .redes a:hover {
     color: white;
+}
+
+@media (max-width: 900px) {
+    #galeria {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 15px; /* mantiene espacio lateral */
+    }
+}
+
+@media (max-width: 500px) {
+    #galeria {
+        grid-template-columns: 1fr;
+        padding: 0 15px; /* mantiene espacio lateral */
+    }
 }
